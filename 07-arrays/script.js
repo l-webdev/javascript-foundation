@@ -1,20 +1,14 @@
-// TODO: Implement the removeItem function
-/*function removeItem(a, num) {
-  if (a === animals && num === 1) {
-    animals.slice(0);
-    return removeItem;
-  } /* else if ((a = animals && index !== 1)) {
-    animals[0];
-  }
-} */
+/*01) removeItem function
+Implement a removeItem function.
+ The first parameter is an array.
+ The second parameter is a number. It's the non-zero-based index of the item that should get deleted.
+ Remove the item and return an array.
+ Ensure that the original array was not mutated.*/
 
-function removeItem(array, number) {
-  const arrayCopy = [];
-  for (let i = 0; i < array.length; i++) {
-    arrayCopy[i] = array[i];
-  }
-  arrayCopy.splice(number - 1, 1);
-  return arrayCopy;
+// TODO: Implement the removeItem function
+
+function removeItem(arr, rem) {
+  return arr.slice(0, rem - 1).concat(arr.slice(rem));
 }
 
 const animals = ["Dog", "Cat", "Lion"];
@@ -31,13 +25,19 @@ console.log(removeItem(fruits, 3));
 console.log(fruits);
 // result should be still: ["Watermelon", "Banana", "Cherry", "Kiwi", "Pineapple", "Apple"]
 
+/*02) sumOfCharacters function
+Implement a sumOfCharacters function.
+ The function has one parameter, which is an array.
+ Check the type of each array entry. If it's a string then store the count of characters.
+ The function returns the total sum of all characters.*/
+
 // TODO: Implement the sumOfCharacters function
 
-function sumOfCharacters(array) {
+function sumOfCharacters(arr) {
   let count = 0;
-  for (let i = 0; i < array.length; i++) {
-    if (typeof array[i] === "string") {
-      count += array[i].length;
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "string") {
+      count += arr[i].length;
     }
   }
   return count;
